@@ -6,6 +6,8 @@ const stringCalculator = {
     if (_.isEqual(numberString, '')) {
       return 0;
     }
+
+    return parseInt(numberString);
   },
 };
 
