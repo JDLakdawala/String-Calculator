@@ -18,9 +18,21 @@ const stringCalculator = {
     const numArray = numberString.split(delimiter);
 
     let sum = 0;
+    let negatives = [];
+
     _.forEach(numArray, (num) => {
-      sum += parseInt(num);
+      const parsedNum = parseInt(num);
+
+      if (parsedNum < 0) {
+        negatives.push(parsedNum);
+      } else {
+        sum += parsedNum;
+      }
     });
+
+    if (negatives.length > 0) {
+      throw new Error(`Negative Number Not Allowed: ${negatives.join(', ')}`);
+    }
 
     return sum;
   },
