@@ -7,8 +7,8 @@ const stringCalculator = {
       return 0;
     }
 
-    // Handle , Delimeter and any Number of Input
-    const numArray = numberString.split(',');
+    // Handle all delimeter by regex
+    const numArray = numberString.split(/,|\n/);
 
     let sum = 0;
     _.forEach(numArray, (num) => {

@@ -11,3 +11,7 @@ test('should return the number itself for a single number', () => {
 test('should return the sum of two numbers', () => {
   expect(stringCalculator.add('1,2')).toBe(3);
 });
+
+test('should handle new line as a separator', () => {
+  expect(stringCalculator.add('1\n2,3')).toBe(6);
+});
