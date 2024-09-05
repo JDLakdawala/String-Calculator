@@ -7,8 +7,15 @@ const stringCalculator = {
       return 0;
     }
 
-    // Handle all delimeter by regex
-    const numArray = numberString.split(/,|\n/);
+    let delimiter = /,|\n/;
+
+    if (numberString.startsWith('//')) {
+      const delimiterEndIndex = numberString.indexOf('\n');
+      delimiter = new RegExp(numberString.substring(2, delimiterEndIndex));
+      numberString = numberString.substring(delimiterEndIndex + 1);
+    }
+
+    const numArray = numberString.split(delimiter);
 
     let sum = 0;
     _.forEach(numArray, (num) => {

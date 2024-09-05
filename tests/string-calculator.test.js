@@ -15,3 +15,7 @@ test('should return the sum of two numbers', () => {
 test('should handle new line as a separator', () => {
   expect(stringCalculator.add('1\n2,3')).toBe(6);
 });
+
+test('should support custom delimiters', () => {
+  expect(stringCalculator.add('//;\n1;2')).toBe(3);
+});
