@@ -7,7 +7,15 @@ const stringCalculator = {
       return 0;
     }
 
-    return parseInt(numberString);
+    // Handle , Delimeter and any Number of Input
+    const numArray = numberString.split(',');
+
+    let sum = 0;
+    _.forEach(numArray, (num) => {
+      sum += parseInt(num);
+    });
+
+    return sum;
   },
 };
 
