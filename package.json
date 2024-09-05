@@ -1,0 +1,23 @@
+{
+  "name": "String-Calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JDLakdawala/String-Calculator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JDLakdawala/String-Calculator/issues"
+  },
+  "homepage": "https://github.com/JDLakdawala/String-Calculator#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
